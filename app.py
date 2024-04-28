@@ -44,7 +44,11 @@ def home():
 # Route for prediction
 @app.route('/predict', methods=['POST'])
 def predict():
-    # Load the trained Gradient Boosting model
+    # Load the train
+    # ed Gradient Boosting model
+    X = wine_dataset.drop('quality',axis=1)
+    Y = wine_dataset['quality'].apply(lambda y_value: 1 if y_value>=7 else 0)
+    X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=3)
     gb_model = GradientBoostingClassifier()
     gb_model.fit(X_train, Y_train)
 
