@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wine Quality Prediction</title>
+</head>
+<body>
+    <h1>Exploratory Data Analysis (EDA)</h1>
+
+    <h2>Volatile Acidity vs Quality</h2>
+    <img src="{{ volatile_acidity_plot }}" alt="Volatile Acidity vs Quality">
+
+    <h2>Citric Acid vs Quality</h2>
+    <img src="{{ citric_acid_plot }}" alt="Citric Acid vs Quality">
+
+    <hr>
+    <h1>Predict Wine Quality</h1>
+    <form action="/predict" method="post">
+        <label for="fixed-acidity">Fixed Acidity:</label>
+        <input type="text" id="fixed-acidity" name="fixed-acidity"><br><br>
+        <label for="volatile-acidity">Volatile Acidity:</label>
+        <input type="text" id="volatile-acidity" name="volatile-acidity"><br><br>
+        <label for="citric-acid">Citric Acid:</label>
+        <input type="text" id="citric-acid" name="citric-acid"><br><br>
+        <label for="residual-sugar">Residual Sugar:</label>
+        <input type="text" id="residual-sugar" name="residual-sugar"><br><br>
+        <label for="chlorides">Chlorides:</label>
+        <input type="text" id="chlorides" name="chlorides"><br><br>
+        <label for="free-sulfur-dioxide">Free Sulfur Dioxide:</label>
+        <input type="text" id="free-sulfur-dioxide" name="free-sulfur-dioxide"><br><br>
+        <label for="total-sulfur-dioxide">Total Sulfur Dioxide:</label>
+        <input type="text" id="total-sulfur-dioxide" name="total-sulfur-dioxide"><br><br>
+        <label for="density">Density:</label>
+        <input type="text" id="density" name="density"><br><br>
+        <label for="pH">pH:</label>
+        <input type="text" id="pH" name="pH"><br><br>
+        <label for="sulphates">Sulphates:</label>
+        <input type="text" id="sulphates" name="sulphates"><br><br>
+        <label for="alcohol">Alcohol:</label>
+        <input type="text" id="alcohol" name="alcohol"><br><br>
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
