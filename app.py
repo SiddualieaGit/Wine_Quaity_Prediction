@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import numpy as np
 import pandas as pd
+import sklearn
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
