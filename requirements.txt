@@ -2,7 +2,6 @@ pandas
 scikit-learn
 numpy
 matplotlib
-XGBRegressor
 GradientBoostingClassifier
 seaborn
 joblib
